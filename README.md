@@ -1025,7 +1025,7 @@ The [Docker Image](https://hub.docker.com/r/rednotehilab/dots.ocr) is based on t
 
 ```shell
 # You need to register model to vllm at first
-hf_model_path=./weights/DotsOCR  # Path to your downloaded model weights
+export hf_model_path=./weights/DotsOCR  # Path to your downloaded model weights
 export PYTHONPATH=$(dirname "$hf_model_path"):$PYTHONPATH
 sed -i '/^from vllm\.entrypoints\.cli\.main import main$/a\
 from DotsOCR import modeling_dots_ocr_vllm' `which vllm`
