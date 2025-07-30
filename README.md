@@ -1,7 +1,7 @@
 <div align="center">
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/main/assets/logo.png" width="300"/>
+    <img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/master/assets/logo.png" width="300"/>
 <p>
 
 <h1 align="center">
@@ -14,7 +14,7 @@ dots.ocr: Multilingual Document Layout Parsing in a Single Vision-Language Model
 
 <div align="center">
   <a href="https://dotsocr.xiaohongshu.com" target="_blank" rel="noopener noreferrer"><strong>🖥️ Live Demo</strong></a> | 
-  <a href="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/main/assets/wechat.jpg" target="_blank" rel="noopener noreferrer"><strong>💬 WeChat</strong></a> | 
+  <a href="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/master/assets/wechat.jpg" target="_blank" rel="noopener noreferrer"><strong>💬 WeChat</strong></a> | 
   <a href="https://www.xiaohongshu.com/user/profile/683ffe42000000001d021a4c" target="_blank" rel="noopener noreferrer"><strong>📕 rednote</strong></a>
 </div>
 
@@ -33,7 +33,7 @@ dots.ocr: Multilingual Document Layout Parsing in a Single Vision-Language Model
 
 
 ### Performance Comparison: dots.ocr vs. Competing Models
-<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/main/assets/chart.png" border="0" />
+<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/master/assets/chart.png" border="0" />
 
 > **Notes:** 
 > - The EN, ZH metrics are the end2end evaluation results of [OmniDocBench](https://github.com/opendatalab/OmniDocBench), and Multilingual metric is the end2end evaluation results of dots.ocr-bench.
@@ -776,7 +776,7 @@ This is an inhouse benchmark which contain 1493 pdf images with 100 languages.
 </table>
 
 > **Notes:**  
-> - prompt_layout_all_en for **parse all**, prompt_layout_only_en for **detection only**, please refer to [prompts](https://github.com/rednote-hilab/dots.ocr/blob/main/dots_ocr/utils/prompts.py)
+> - prompt_layout_all_en for **parse all**, prompt_layout_only_en for **detection only**, please refer to [prompts](https://github.com/rednote-hilab/dots.ocr/blob/master/dots_ocr/utils/prompts.py)
 
 
 ### 3. olmOCR-bench.
@@ -954,7 +954,7 @@ This is an inhouse benchmark which contain 1493 pdf images with 100 languages.
 <td>75.5 ± 1.0</td>
 </tr>
 <tr>
-<td>MonkeyOCR-pro-3B <a href="http://vlrlabmonkey.xyz:7685/">[Demo]</a></td>
+<td>MonkeyOCR-pro-3B</td>
 <td><strong>83.8</strong></td>
 <td>68.8</td>
 <td>74.6</td>
@@ -1021,7 +1021,7 @@ python tools/download_model.py
 ## 2. Deployment
 ### vLLM inference
 We highly recommend using vllm for deployment and inference. All of our evaluations results are based on vllm version 0.9.1.
-The [Docker Image](https://hub.docker.com/r/rednotehilab/dots.ocr) is based on the official vllm image. You can also follow [Dockerfile](https://github.com/rednote-hilab/dots.ocr/blob/main/docker/Dockerfile) to build the deployment environment by yourself. 
+The [Docker Image](https://hub.docker.com/r/rednotehilab/dots.ocr) is based on the official vllm image. You can also follow [Dockerfile](https://github.com/rednote-hilab/dots.ocr/blob/master/docker/Dockerfile) to build the deployment environment by yourself. 
 
 ```shell
 # You need to register model to vllm at first
@@ -1169,27 +1169,27 @@ python demo/demo_gradio_annotion.py
 
 
 ### Example for formula document
-<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/main/assets/showcase/formula1.png" alt="formula1.png" border="0" />
-<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/main/assets/showcase/formula2.png" alt="formula2.png" border="0" />
-<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/main/assets/showcase/formula3.png" alt="formula3.png" border="0" />
+<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/master/assets/showcase/formula1.png" alt="formula1.png" border="0" />
+<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/master/assets/showcase/formula2.png" alt="formula2.png" border="0" />
+<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/master/assets/showcase/formula3.png" alt="formula3.png" border="0" />
 
 ### Example for table document
-<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/main/assets/showcase/table1.png" alt="table1.png" border="0" />
-<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/main/assets/showcase/table2.png" alt="table2.png" border="0" />
-<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/main/assets/showcase/table3.png" alt="table3.png" border="0" />
+<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/master/assets/showcase/table1.png" alt="table1.png" border="0" />
+<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/master/assets/showcase/table2.png" alt="table2.png" border="0" />
+<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/master/assets/showcase/table3.png" alt="table3.png" border="0" />
 
 ### Example for multilingual document
-<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/main/assets/showcase/Tibetan.png" alt="Tibetan.png" border="0" />
-<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/main/assets/showcase/tradition_zh.png" alt="tradition_zh.png" border="0" />
-<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/main/assets/showcase/nl.png" alt="nl.png" border="0" />
-<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/main/assets/showcase/kannada.png" alt="kannada.png" border="0" />
-<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/main/assets/showcase/russian.png" alt="russian.png" border="0" />
+<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/master/assets/showcase/Tibetan.png" alt="Tibetan.png" border="0" />
+<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/master/assets/showcase/tradition_zh.png" alt="tradition_zh.png" border="0" />
+<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/master/assets/showcase/nl.png" alt="nl.png" border="0" />
+<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/master/assets/showcase/kannada.png" alt="kannada.png" border="0" />
+<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/master/assets/showcase/russian.png" alt="russian.png" border="0" />
 
 ### Example for reading order
-<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/main/assets/showcase/reading_order.png" alt="reading_order.png" border="0" />
+<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/master/assets/showcase/reading_order.png" alt="reading_order.png" border="0" />
 
 ### Example for grounding ocr
-<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/main/assets/showcase/grounding.png" alt="grounding.png" border="0" />
+<img src="https://raw.githubusercontent.com/rednote-hilab/dots.ocr/master/assets/showcase/grounding.png" alt="grounding.png" border="0" />
 
 
 ## Acknowledgments
@@ -1206,7 +1206,7 @@ We also thank [DocLayNet](https://github.com/DS4SD/DocLayNet), [M6Doc](https://g
 
 - **Parsing Failures:** The model may fail to parse under certain conditions:
   - When the character-to-pixel ratio is excessively high. Try enlarging the image or increasing the PDF parsing DPI (a setting of 200 is recommended). However, please note that the model performs optimally on images with a resolution under 11289600 pixels.
-  - Continuous special characters, such as ellipses (`...`) and underscores (`_`), may cause the prediction output to repeat endlessly. In such scenarios, consider using alternative prompts like `prompt_layout_only_en`, `prompt_ocr`, or `prompt_grounding_ocr` ([details here](https://github.com/rednote-hilab/dots.ocr/blob/main/dots_ocr/utils/prompts.py)).
+  - Continuous special characters, such as ellipses (`...`) and underscores (`_`), may cause the prediction output to repeat endlessly. In such scenarios, consider using alternative prompts like `prompt_layout_only_en`, `prompt_ocr`, or `prompt_grounding_ocr` ([details here](https://github.com/rednote-hilab/dots.ocr/blob/master/dots_ocr/utils/prompts.py)).
     
 - **Performance Bottleneck:** Despite its 1.7B parameter LLM foundation, **dots.ocr** is not yet optimized for high-throughput processing of large PDF volumes. 
 
