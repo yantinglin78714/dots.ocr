@@ -849,7 +849,7 @@ This is an inhouse benchmark which contain 1493 pdf images with 100 languages.
 <td>Nanonets OCR</td>
 <td>67.0</td>
 <td>68.6</td>
-<td><strong>77.7</strong></td>
+<td>77.7</td>
 <td>39.5</td>
 <td>40.7</td>
 <td>69.9</td>
@@ -1014,7 +1014,7 @@ pip install -e .
 ### Download Model Weights
 > 💡**Note:** Please use a directory name without periods (e.g., `DotsOCR` instead of `dots.ocr`) for the model save path. This is a temporary workaround pending our integration with Transformers.
 ```shell
-python tools/download_model.py
+python3 tools/download_model.py
 ```
 
 
@@ -1025,13 +1025,16 @@ The [Docker Image](https://hub.docker.com/r/rednotehilab/dots.ocr) is based on t
 
 ```shell
 # You need to register model to vllm at first
-export hf_model_path=./weights/DotsOCR  # Path to your downloaded model weights
+python3 tools/download_model.py
+export hf_model_path=./weights/DotsOCR  # Path to your downloaded model weights, Please use a directory name without periods (e.g., `DotsOCR` instead of `dots.ocr`) for the model save path. This is a temporary workaround pending our integration with Transformers.
 export PYTHONPATH=$(dirname "$hf_model_path"):$PYTHONPATH
 sed -i '/^from vllm\.entrypoints\.cli\.main import main$/a\
-from DotsOCR import modeling_dots_ocr_vllm' `which vllm`
+from DotsOCR import modeling_dots_ocr_vllm' `which vllm`  # If you downloaded model weights by yourself, please replace `DotsOCR` by your model saved directory name, and remember to use a directory name without periods (e.g., `DotsOCR` instead of `dots.ocr`) 
 
 # launch vllm server
 CUDA_VISIBLE_DEVICES=0 vllm serve ${hf_model_path} --tensor-parallel-size 1 --gpu-memory-utilization 0.95  --chat-template-content-format string --served-model-name model --trust-remote-code
+
+# If you get a ModuleNotFoundError: No module named 'DotsOCR', please check the note above on the saved model directory name.
 
 # vllm api demo
 python3 ./demo/demo_vllm.py --prompt_mode prompt_layout_all_en
