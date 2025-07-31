@@ -8,7 +8,7 @@
 dots.ocr: Multilingual Document Layout Parsing in a Single Vision-Language Model
 </h1>
 
-[![arXiv](https://img.shields.io/badge/Arxiv-dots.ocr-b31b1b.svg?logo=arXiv)]()
+[![Blog](https://img.shields.io/badge/Blog-View_on_GitHub-333.svg?logo=github)](https://github.com/rednote-hilab/dots.ocr/blob/master/assets/blog.md)
 [![HuggingFace](https://img.shields.io/badge/HuggingFace%20Weights-black.svg?logo=HuggingFace)](https://huggingface.co/rednote-hilab/dots.ocr)
 
 
