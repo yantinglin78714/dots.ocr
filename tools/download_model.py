@@ -15,5 +15,10 @@ if __name__ == '__main__':
     if args.type == "huggingface":
         from huggingface_hub import snapshot_download
         snapshot_download(repo_id=args.name, local_dir=model_dir, local_dir_use_symlinks=False, resume_download=True)
+    elif args.type == "modelscope":
+        from modelscope import snapshot_download
+        snapshot_download(repo_id=args.name, local_dir=model_dir)
+    else:
+        raise ValueError(f"Invalid type: {args.type}")
     
     print(f"model downloaded to {model_dir}")

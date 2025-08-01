@@ -1015,6 +1015,9 @@ pip install -e .
 > 💡**Note:** Please use a directory name without periods (e.g., `DotsOCR` instead of `dots.ocr`) for the model save path. This is a temporary workaround pending our integration with Transformers.
 ```shell
 python3 tools/download_model.py
+
+# with modelscope
+python3 tools/download_model.py --type modelscope
 ```
 
 
