@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   dots-ocr-server:
-    image: dots-ocr:20250801
+    image: dots-ocr:laster
     container_name: dots-ocr-container
     ports:
       - "8001:8000"
@@ -38,3 +38,4 @@ services:
             --chat-template-content-format string \
             --served-model-name dotsocr-model \
             --trust-remote-code
+
