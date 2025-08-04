@@ -10,7 +10,6 @@ services:
       #download model to local，model url：https://www.modelscope.cn/models/rednote-hilab/dots.ocr
       - ./model/dots.ocr:/workspace/weights/DotsOCR
     environment:
-      - CUDA_VISIBLE_DEVICES=0
       - PYTHONPATH=/workspace/weights:$PYTHONPATH
     deploy:
       resources:
@@ -39,6 +38,7 @@ services:
             --chat-template-content-format string \
             --served-model-name dotsocr-model \
             --trust-remote-code
+
 
 
 
