@@ -5,9 +5,10 @@ services:
     image: dots-ocr:latest
     container_name: dots-ocr-container
     ports:
-      - "8001:8000"
+      - "8000:8000"
     volumes:
-      - /app/data/gpt/source-model/dots.ocr:/workspace/weights/DotsOCR
+      #download model to local，model url：https://www.modelscope.cn/models/rednote-hilab/dots.ocr
+      - ./model/dots.ocr:/workspace/weights/DotsOCR
     environment:
       - CUDA_VISIBLE_DEVICES=0
       - PYTHONPATH=/workspace/weights:$PYTHONPATH
@@ -38,5 +39,6 @@ services:
             --chat-template-content-format string \
             --served-model-name dotsocr-model \
             --trust-remote-code
+
 
 
