@@ -1139,7 +1139,7 @@ print(output_text)
 # Parse a single image
 python3 dots_ocr/parser.py demo/demo_image1.jpg
 # Parse a single PDF
-python3 dots_ocr/parser.py demo/demo_pdf1.pdf  --num_threads 64  # try bigger num_threads for pdf with a large number of pages
+python3 dots_ocr/parser.py demo/demo_pdf1.pdf  --num_thread 64  # try bigger num_threads for pdf with a large number of pages
 
 # Layout detection only
 python3 dots_ocr/parser.py demo/demo_image1.jpg --prompt prompt_layout_only_en

@@ -190,7 +190,7 @@ class DotsOCRParser:
         
     def parse_pdf(self, input_path, filename, prompt_mode, save_dir):
         print(f"loading pdf: {input_path}")
-        images_origin = load_images_from_pdf(input_path)
+        images_origin = load_images_from_pdf(input_path, dpi=self.dpi)
         total_pages = len(images_origin)
         tasks = [
             {
