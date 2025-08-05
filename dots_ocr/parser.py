@@ -116,7 +116,7 @@ class DotsOCRParser:
                 )
             if filtered and prompt_mode != 'prompt_layout_only_en':  # model output json failed, use filtered process
                 json_file_path = os.path.join(save_dir, f"{save_name}.json")
-                with open(json_file_path, 'w') as w:
+                with open(json_file_path, 'w', encoding="utf-8") as w:
                     json.dump(response, w, ensure_ascii=False)
 
                 image_layout_path = os.path.join(save_dir, f"{save_name}.jpg")
@@ -143,7 +143,7 @@ class DotsOCRParser:
                     image_with_layout = origin_image
 
                 json_file_path = os.path.join(save_dir, f"{save_name}.json")
-                with open(json_file_path, 'w') as w:
+                with open(json_file_path, 'w', encoding="utf-8") as w:
                     json.dump(cells, w, ensure_ascii=False)
 
                 image_layout_path = os.path.join(save_dir, f"{save_name}.jpg")
@@ -242,7 +242,7 @@ class DotsOCRParser:
             raise ValueError(f"file extension {file_ext} not supported, supported extensions are {image_extensions} and pdf")
         
         print(f"Parsing finished, results saving to {save_dir}")
-        with open(os.path.join(output_dir, os.path.basename(filename)+'.jsonl'), 'w') as w:
+        with open(os.path.join(output_dir, os.path.basename(filename)+'.jsonl'), 'w', encoding="utf-8") as w:
             for result in results:
                 w.write(json.dumps(result, ensure_ascii=False) + '\n')
 
