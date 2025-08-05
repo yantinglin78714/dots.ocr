@@ -1151,6 +1151,9 @@ python3 dots_ocr/parser.py demo/demo_image1.jpg --prompt prompt_ocr
 python3 dots_ocr/parser.py demo/demo_image1.jpg --prompt prompt_grounding_ocr --bbox 163 241 1536 705
 
 ```
+**Based on Transformers**, you can parse an image or a pdf file using the same commands above, just add `--use_hf true`. 
+
+> Notice: transformers is slower than vllm, if you want to use demo/* with transformers，just add `use_hf=True` in `DotsOCRParser(..,use_hf=True)`
 
 <details>
 <summary><b>Output Results</b></summary>
