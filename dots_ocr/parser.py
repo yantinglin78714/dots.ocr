@@ -416,6 +416,7 @@ def main():
         args.input_path, 
         prompt_mode=args.prompt,
         bbox=args.bbox,
+        fitz_preprocess=True,
         )
     
 
